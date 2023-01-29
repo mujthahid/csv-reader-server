@@ -14,4 +14,3 @@ app.use(cors())
 app.use('/api',apiRouter);
 
 app.listen(3001,()=> console.log('listenig on 3001'))
-y
