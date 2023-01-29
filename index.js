@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express()
 const cors = require('cors')
+require('dotenv').config()
+
 const apiRouter = require('./apiRouter')
 
 app.use(express.json())
@@ -13,4 +15,5 @@ app.use(cors())
 //using router middleware
 app.use('/api',apiRouter);
 
-app.listen(3001,()=> console.log('listenig on 3001'))
+const port = process.env.PORT || 5000;
+app.listen(port,()=> console.log(`listenig on ${port}`))
