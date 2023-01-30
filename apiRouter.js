@@ -51,7 +51,13 @@ router.get('/books',(req,res)=>{
         })
         })
 
-      
+      router.get('/addcsv',(req,res)=>{
+        try {
+          res.status(200).json({status:true})
+        } catch (error) {
+          console.log(true)
+        }
+      })
     
       router.post('/createCsv',(req,res)=>{
         //checking if the name contains the .csv extension
